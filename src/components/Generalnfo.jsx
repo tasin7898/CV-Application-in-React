@@ -50,15 +50,15 @@ function GeneralInfo() {
     </div>
   ) : (
     <div className="general-info-display">
-      <p className="display">
+      <p className="gen-display">
         <strong>Name: </strong>
         {genInfo.name}
       </p>
-      <p className="display">
+      <p className="gen-displaydisplay">
         <strong>Email: </strong>
         {genInfo.email}
       </p>
-      <p className="display">
+      <p className="gen-display">
         <strong>Phone: </strong>
         {genInfo.phone}
       </p>
