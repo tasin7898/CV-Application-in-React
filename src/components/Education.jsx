@@ -31,6 +31,7 @@ function EducationList() {
   }
   function handleDelete(id) {
     setEduList((prev) => prev.filter((edu) => edu.id !== id));
+    setEditId(null);
   }
 
   function isEntryValid(id) {
@@ -69,10 +70,16 @@ function EducationList() {
               />
             </label>
 
-            <select name="year" value={year} onChange={(e) => handleChange(id, e)}>
+            <select
+              name="year"
+              value={year}
+              onChange={(e) => handleChange(id, e)}
+            >
               <option value="">Select Year</option>
-              {years.map(yr => (
-                <option key= {yr} value={yr}>{yr}</option>
+              {years.map((yr) => (
+                <option key={yr} value={yr}>
+                  {yr}
+                </option>
               ))}
             </select>
             <button
